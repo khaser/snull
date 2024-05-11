@@ -10,26 +10,18 @@
         "192.167.1.1" = [ "remote1" ];
       };
       interfaces = {
-        sn0 = {
-          ipv4 = {
-            addresses = [
-              {
-                address = "192.167.0.1";
-                prefixLength = 24;
-              }
-            ];
-          };
-        };
-        sn1 = {
-          ipv4 = {
-            addresses = [
-              {
-                address = "192.167.1.2";
-                prefixLength = 24;
-              }
-            ];
-          };
-        };
+        sn0.ipv4.addresses = [
+          {
+            address = "192.167.0.1";
+            prefixLength = 24;
+          }
+        ];
+        sn1.ipv4.addresses = [
+          {
+            address = "192.167.1.2";
+            prefixLength = 24;
+          }
+        ];
       };
     };
     boot.kernelModules = [ "snull" ];

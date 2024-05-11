@@ -1,0 +1,8 @@
+#!/usr/bin/env -S sudo bash
+
+# Use a pathname, as new modutils don't look in the current dir by default
+sudo insmod result/lib/modules/*/extra/snull.ko.xz
+ifconfig sn0 up
+ifconfig sn1 up
+ifconfig sn0 local0
+ifconfig sn1 local1

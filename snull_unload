@@ -1,0 +1,5 @@
+#!/usr/bin/env -S sudo bash
+
+ifconfig sn0 down
+ifconfig sn1 down
+sudo modprobe -r snull
